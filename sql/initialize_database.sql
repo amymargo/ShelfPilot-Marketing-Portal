@@ -66,12 +66,5 @@ CREATE TABLE contracts (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-ALTER TABLE accounts MODIFY account_type ENUM('admin', 'marketer', 'small_business', 'brand', 'wholesaler', 'other') NOT NULL;
-ALTER TABLE waitlist MODIFY account_type ENUM('small_business', 'brand', 'wholesaler', 'other') NOT NULL;
-
-ALTER TABLE waitlist 
-ADD phone_number VARCHAR(20),
-ADD company_address VARCHAR(255);
-
 INSERT INTO accounts (username, password, first_name, last_name, email, company_name, account_type, created_at)
 VALUES ('admin', '$2a$10$Fl2I8GbzsdSm/hrUBREV9eVP4iYucGQGdN2yZAacv.WbFsRZmm3Sq', 'Example', 'Admin', 'user@shelfpilot.com', 'ShelfPilot', 'admin', NOW());
