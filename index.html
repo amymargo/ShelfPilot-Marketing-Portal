@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShelfPilot - Revolutionizing Wholesale</title>
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1:300,600|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Introducing ShelfPilot!</h2>
+            <p>
+                ShelfPilot aims to revolutionize the way vendors, retailers, and small businesses connect with brands in a dynamic marketplace. 
+                By streamlining wholesale distribution, we prioritize transparency, efficiency, and affordability, ensuring that all parties benefit from a more accessible supply chain.
+            </p>
+            <a href="about.html" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Sign-up and Information Section -->
+    <section class="content-area">
+        <div class="info-box">
+        <h3>Join Our Waitlist Today!</h3>
+    
+        <!-- Waitlist Form -->
+        <form id="waitlist-form" action="/waitlist" method="POST">
+            <!-- Wrap First Name and Last Name in a Flex Container -->
+            <div class="name-fields pair-fields">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            </div>
+    
+            <div class="contact-fields pair-fields">
+            <input type="text" name="phone_number" placeholder="Phone Number" required 
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                    title="Please enter a valid phone number in the format 123-456-7890.">
+            <input type="email" name="email" placeholder="Email" required>
+            </div>
+    
+            <input type="text" name="company" placeholder="Company (Optional)">
+    
+            <select name="account_type" id="account_type" required>
+            <option value="" disabled selected>Please select from the following</option>
+            <option value="small_business">Small Business or Retailer</option>
+            <option value="brand">Brand</option>
+            <option value="wholesaler">Wholesaler</option>
+            <option value="other">Other</option>
+            </select>
+    
+            <button type="submit">Sign Me Up!</button>
+        </form>
+    
+        <!-- Success Message (Hidden by Default) -->
+        <div id="waitlist-success" style="display: none; text-align: center;">
+            <p style="color: green; font-size: 1.2rem; margin-top: 100px;">Thank you! You’ve been added to the waitlist successfully.</p>
+            <img src="images/green_check.png" alt="Success" style="width: 50px; display: block; margin: 0 auto;">
+        </div>   
+        </div>
+    
+        <div class="why-waitlist">
+        <h3>Why Join Our Waitlist?</h3>
+        <p>Join the ShelfPilot waitlist today and unlock a world of opportunities! Whether you’re a brand looking to expand 
+            your reach or a small business eager for unique, viral, or hot selling products, ShelfPilot is your gateway to streamlined wholesale distribution.</p>
+        <p><strong>Exclusive Early Access:</strong> Secure your spot ahead of the competition. By joining our waitlist, 
+            you’ll be among the first to access our platform when we launch. Dive in early to explore exciting partnerships and offerings.</p>
+        <p><strong>Special Discounts:</strong> As a thank you for your commitment, early waitlist members will receive exclusive offers, 
+            such as reduced commission rates for brands and free advertising on storefronts, and discounts for business owners!</p>
+        <p><strong>Insider Information:</strong> Stay informed with the latest updates on ShelfPilot!</p>
+        <p>Don’t wait to transform how you connect with brands or retailers. Sign up for our waitlist today and be part of the <strong>future</strong> of wholesale distribution!</p>
+        </div>
+    </section>  
+
+    <!-- Journey Section -->
+    <section class="journey">
+        <h3>Discover More About Our Amazing Journey</h3>
+        <p>At ShelfPilot, we’re on a mission to revolutionize the way small businesses connect with brands. Born from the belief that every retailer deserves access to high-quality, 
+            affordable products, we've created a platform that simplifies wholesale distribution and empowers every business owner. Our innovative approach eliminates the barriers of traditional supply chains, 
+            allowing brands to reach their markets directly. Join us on this exciting journey as we reshape the future of commerce—where small businesses thrive and brands flourish. Discover how we can elevate your brand or business today!</p>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="scripts/template.js"></script>
+    <script src="scripts/isloggedin.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

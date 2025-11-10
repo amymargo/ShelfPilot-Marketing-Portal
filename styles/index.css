@@ -1,0 +1,190 @@
+.hero {
+    position: relative; /* Needed for the overlay */
+    height: 100vh; /* Full-screen height */
+    background-image: url('../images/index.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Dark overlay tint */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* black tint, 45% opacity */
+    z-index: 1;
+}
+
+/* Bring all hero content (text + button) above the overlay */
+.hero * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Text styles */
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #F2A68D;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+/* Content Section */
+.content-area {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 50px;
+}
+
+.info-box, .why-waitlist {
+    background-color: rgba(255, 255, 255, 0.85); /* Transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.info-box h3, .why-waitlist h3 {
+    color: #F2A68D;
+    margin-bottom: 20px;
+}
+
+.info-box form input, .info-box form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+.info-box form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Gothic A1', sans-serif;
+    background-color: white;
+    color: grey;
+    appearance: none; /* Remove the default dropdown arrow style */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select:focus, input:focus {
+    border-color: #F2A68D;
+    outline: none;
+    box-shadow: 0 0 8px rgba(242, 166, 141, 0.5);
+}
+
+button {
+    background-color: #F2A68D;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: black;
+}
+
+/* Journey Section */
+.journey {
+    background-color: #F2A68D;
+    color: white;
+    text-align: center;
+    padding: 80px 50px;
+}
+
+.journey h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.journey p {
+    font-size: 1.2rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Arrow for the Dropdown */
+select {
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3E%3Cpath fill="gray" d="M7 7l3 3 3-3z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center; /* Align the arrow properly */
+    background-size: 22px 22px; /* Adjust the size of the arrow */
+}
+
+/* Adjust layout for first and last name */
+.info-box form {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping if the screen is too small */
+    gap: 5px; /* Add 5px gap between the first and last name fields */
+}
+
+.info-box form .pair-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Ensure that all other input fields remain full width */
+.info-box form input[type="email"], 
+.info-box form input[type="text"]:nth-child(n+3), 
+.info-box form select, 
+.info-box form button {
+    width: 100%;
+}

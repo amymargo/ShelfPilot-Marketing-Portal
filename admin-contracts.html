@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - ShelfPilot</title>
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1:300,600|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo-link">
+                <div class="logo">
+                    <img src="images/newlogo.png" alt="ShelfPilot Logo">
+                </div>
+            </a>
+            <nav class="navbar-right"> <!-- Added navbar-right class -->
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="request_demo.html">Request a Demo</a></li>
+                    <li><a href="sellers.html">Sellers</a></li>
+                    <li><a href="#" id="profile-link">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Profile Menu -->
+    <div id="profile-menu" class="profile-menu">
+        <button id="close-menu">&times;</button>
+        <ul>
+            <li><a href="admin-dashboard.html">Dashboard</a></li>
+            <li><a href="admin-waitlist.html">Waitlist</a></li>
+            <!-- <li><a href="#">Marketers</a></li> -->
+            <li><a href="admin-contracts.html">Contracts</a></li>
+            <li><a href="admin-demo-requests.html">Demo Requests</a></li>
+            <li><a href="admin-seller-requests.html">Seller Requests</a></li>
+            <li><a href="#" id="logout-link">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content-area">
+        <div class="contracts-box">
+            <div class="contracts-header">
+                <h2>Contracts</h2>
+                <button class="create-contract-btn" onclick="window.location.href='create_contract.html'">Create New Contract</button>
+            </div>
+            <!-- Waiting List Table -->
+            <table id="contracts-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Company</th>
+                        <th>Address</th>
+                        <th>Marketer</th>
+                        <th>Marketer Percent</th>
+                        <th class="ein-column-header">EIN Tax ID</th>
+                        <th>Sales Certificate</th>
+                        <th>Term</th>
+                        <th>Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- data will be dynamically loaded here -->
+                </tbody>
+            </table>            
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ShelfPilot Inc. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/admin.js"></script>
+</body>
+</html>

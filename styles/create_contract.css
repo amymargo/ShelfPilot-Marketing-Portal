@@ -1,0 +1,146 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.info-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Maximum width */
+    width: 90%; /* Ensures responsiveness on smaller screens */
+    margin: auto;
+}
+
+/* Header styling */
+.info-box h3 {
+    color: #F2A68D;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    text-align: center; /* Center header text */
+}
+
+/* Form Styling */
+.info-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form Input Fields */
+.info-box form input,
+.info-box form select,
+.info-box form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+/* Label Styling */
+.info-box form label {
+    font-size: 0.9rem;
+    font-family: 'Gothic A1', sans-serif;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+/* Input and Select Field Focus Effects */
+select:focus, input:focus {
+    border-color: #F2A68D;
+    outline: none;
+    box-shadow: 0 0 8px rgba(242, 166, 141, 0.5);
+}
+
+/* Styling the Select Fields */
+.info-box form select {
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3E%3Cpath fill="gray" d="M7 7l3 3 3-3z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 22px 22px;
+    color: grey;
+}
+
+/* Button Styling */
+button {
+    background-color: #F2A68D;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: black;
+}
+
+/* Pair fields styling */
+.pair-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Ensure that all other input fields remain full width */
+.info-box form input[type="email"],
+.info-box form input[type="text"]:nth-child(n+3),
+.info-box form select,
+.info-box form button {
+    width: 100%;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .info-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .pair-fields {
+        flex-direction: column;
+    }
+}
+
+/* Ensure the html and body take full height and apply flexbox */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Margin for content to avoid overlap with the fixed navbar */
+.content-area, .info-box {
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+
+/* Main Content Styling */
+.content-area {
+    flex-grow: 1; /* Ensure the main content area grows to fill the space */
+    padding: 50px; /* Add padding if needed */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    flex-shrink: 0;
+    margin-top: auto; /* Push the footer to the bottom */
+}

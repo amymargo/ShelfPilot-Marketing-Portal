@@ -1,0 +1,59 @@
+/* Hero Section */
+.about-hero {
+    height: 60vh;
+    background-image: url('../images/about-hero.jpg'); /* Add a background image or color */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.about-hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Story Content Section */
+.story-content {
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.story-box {
+    background-color: rgba(255, 255, 255, 0.6); /* Transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    width: 60%;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

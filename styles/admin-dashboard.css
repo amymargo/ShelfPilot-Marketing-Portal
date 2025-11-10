@@ -1,0 +1,196 @@
+/* Move the navbar-right when profile-menu is active */
+.navbar-right.shifted {
+    transform: translateX(-250px); /* Shift the right-side nav items left by 250px (same width as the menu) */
+    transition: transform 0.3s ease;
+}
+
+/* Profile Menu */
+.profile-menu {
+    position: fixed;
+    right: -250px;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #F3DCD4;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    padding-top: 18px;
+    z-index: 200;
+}
+
+.profile-menu ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.profile-menu ul li {
+    margin-bottom: 20px;
+}
+
+.profile-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.profile-menu button#close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Active state when the menu is open */
+.profile-menu.active {
+    right: 0;
+}
+
+/* Set the HTML and body to use flexbox and occupy the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure the main content area takes up the remaining space */
+.content-area {
+    flex-grow: 1;
+    padding: 50px 50px 20px 50px; /* 50px on top, left, and right, 0 on the bottom */
+    margin-top: 80px; /* Adjust to account for the fixed navbar */
+}
+
+/* Separate container for each section */
+#waitlist-table-container, #contracts-table-container, #demo-requests-table-container, #seller-requests-table-container {
+    margin-bottom: 30px; /* Add spacing between all tables */
+}
+
+/* Styling for the table containers */
+.waitlist-box, .contracts-box, .seller-requests-box, .demo-requests-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* Styling for headers of each table container */
+.waitlist-header, .contracts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.waitlist-header h2, .contracts-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+/* Styling for dropdowns */
+#marketer-filter {
+    color: gray;
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+}
+
+#marketer-filter:focus {
+    border-color: #F2A68D;
+    box-shadow: 0 0 8px rgba(242, 166, 141, 0.5);
+}
+
+/* Styling for tables */
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Styling for headers */
+thead th {
+    background-color: #F2A68D;
+    color: white;
+    font-weight: bold;
+}
+
+/* Alternate row background */
+tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+/* Styling for buttons */
+.create-contract-btn {
+    padding: 10px 15px;
+    background-color: #F2A68D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.create-contract-btn:hover {
+    background-color: #e29077;
+}
+
+.create-contract-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(242, 166, 141, 0.5);
+}
+
+/* Styling for the header sections */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.resizer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px; /* Width of the resizer handle */
+    height: 100%;
+    cursor: col-resize; /* Change cursor to resizing mode */
+    user-select: none; /* Prevent text selection while resizing */
+    /*background-color: transparent; /* Invisible handle */
+    background-color: transparent; /* Temporarily add color to see the resizer */
+}
+
+table th {
+    position: relative; /* Required for resizer to position */
+}
+
+table th:nth-child(1), table td:nth-child(1) {
+    width: 3%;
+}
+
+/* Target the last column in the waitlist table on the admin dashboard */
+#waitlist-table-container table td:last-child {
+    vertical-align: middle;
+    text-align: center;
+}
+
+#waitlist-table-container table td:last-child .create-contract-btn {
+    margin: 0 auto;
+    display: inline-block;
+}

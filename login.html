@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ShelfPilot</title>
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1:300,600|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Login Form Section -->
+    <section class="content-area">
+        <div class="form-box">
+            <h3>Login to Your Account</h3>
+            <div class="name-fields">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button id="loginButton">Login</button>
+            <!-- Inline error message (hidden by default) -->
+            <p id="login-error"
+            style="display:none; color:#ff6b6b; font-size:1rem; text-align:center; margin-top:12px;">
+            Unable to log in. Please check your credentials or try again later.
+            </p>
+            <!-- Buttons for Create Account and Join as Vendor -->
+            <!-- <div class="additional-buttons">
+                <a href="/create-account.html" class="button-link">Create an Account</a>
+                <a href="/join-vendor.html" class="button-link">Join as a Vendor</a>
+            </div> -->
+        </div>
+    </section>
+    
+    <p id="error-message" style="color:red;"></p>   
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="scripts/login.js"></script>
+    <script src="scripts/template.js"></script>
+</body>
+</html>

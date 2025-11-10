@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - ShelfPilot</title>
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1:300,600|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/admin.css">
+    <link rel="stylesheet" href="styles/create_contract.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo-link">
+                <div class="logo">
+                    <img src="images/newlogo.png" alt="ShelfPilot Logo">
+                </div>
+            </a>
+            <nav class="navbar-right"> <!-- Added navbar-right class -->
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="request_demo.html">Request a Demo</a></li>
+                    <li><a href="sellers.html">Sellers</a></li>
+                    <li><a href="#" id="profile-link">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Profile Menu -->
+    <div id="profile-menu" class="profile-menu">
+        <button id="close-menu">&times;</button>
+        <ul>
+            <li><a href="admin-dashboard.html">Dashboard</a></li>
+            <li><a href="admin-waitlist.html">Waitlist</a></li>
+            <!-- <li><a href="#">Marketers</a></li> -->
+            <li><a href="admin-contracts.html">Contracts</a></li>
+            <li><a href="admin-demo-requests.html">Demo Requests</a></li>
+            <li><a href="admin-seller-requests.html">Seller Requests</a></li>
+            <li><a href="#" id="logout-link">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="info-box">
+        <h3>Create Contract</h3>
+        <form id="create-contract-form" action="/create-contract" method="POST" enctype="multipart/form-data">
+            <div class="pair-fields">
+                <input type="text" id="first-name" name="first_name" placeholder="First Name" required>
+                <input type="text" id="last-name" name="last_name" placeholder="Last Name" required>
+            </div>
+            <div class="pair-fields">
+                <input type="text" id="phone-number" name="phone_number" placeholder="Phone Number" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <input type="text" id="company-name" name="company_name" placeholder="Company Name" required>
+            <input type="text" id="company-address" name="company_address" placeholder="Company Address **Must Match Sales Certificate**" required>
+
+            <input type="text" id="marketer" name="marketer" placeholder="Marketer Name" required>
+            <input type="number" id="marketer-percentage" name="marketer_percentage" placeholder="Marketer Percentage" min="0" max="100" step="1" required>
+            <input type="text" id="ein" name="ein" placeholder="EIN Tax ID Number" pattern="^\d{2}-?\d{7}$" title="EIN must be exactly 9 digits" required>
+            
+            <label for="sales-certificate">Upload Sales Certificate:</label>
+            <input type="file" id="sales-certificate" name="sales_certificate" accept="image/*" required>
+            
+            <label for="contract-term">Contract Term:</label>
+            <select id="contract-term" name="contract_term" onchange="showCustomInput()" required>
+                <option value="6">6 Months</option>
+                <option value="12">12 Months</option>
+                <option value="24">24 Months</option>
+                <option value="36">36 Months</option>
+                <option value="custom">Custom</option>
+            </select>
+            <input type="number" id="custom-term" name="custom_term" placeholder="Enter custom months" style="display: none;" min="1" required>            
+            <button type="submit">Save Contract</button>
+        </form>
+    </div>  
+    
+    <script src="scripts/isloggedin.js"></script>
+    <script src="scripts/admin.js"></script>
+    <script src="scripts/create_contract.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ShelfPilot Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+body {
+    background: url('../images/city-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+/* Add a dark overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the darkness here */
+    z-index: 1;
+}
+
+/* Flexbox for full height centering */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Center the login form */
+.content-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Takes up remaining height */
+    padding: 100px 50px;
+    margin-top: 80px; /* Margin to offset the fixed navbar */
+}
+
+.form-box {
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Ensure the box is on top of the background */
+}
+
+.form-box h3 {
+    color: #F2A68D;
+    margin-bottom: 20px;
+}
+
+.form-box form input,
+.form-box form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+.form-box form button {
+    background-color: #F2A68D;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.form-box form button:hover {
+    background-color: black;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .form-box {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+select:focus, input:focus {
+    border-color: #F2A68D;
+    outline: none;
+    box-shadow: 0 0 8px rgba(242, 166, 141, 0.5);
+}
+
+.name-fields input,
+#loginButton {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+#loginButton {
+    background-color: #F2A68D;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#loginButton:hover {
+    background-color: black;
+}
+
+/* Style the additional links */
+.additional-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the links */
+    gap: 25%; /* Add space between the two links */
+}
+
+.button-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1rem; /* Slightly larger for visibility */
+    font-weight: normal;
+    color: #F2A68D;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.button-link:hover {
+    color: black;
+}

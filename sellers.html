@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join as a Supplier - ShelfPilot</title>
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1:300,600|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sellers.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Sell on ShelfPilot</h1>
+            <p>Reach new customers and grow your business with ShelfPilot's powerful wholesale platform. Join thousands of suppliers expanding their market.</p>
+            <a href="#" class="cta-button" id="show-form-button">Start Selling Today</a>
+        </div>
+    </section>
+
+    <!-- Main Content Area (Initially Hidden Form) -->
+    <section class="content-area" id="form-section" style="display: none;">
+        <div class="supplier-box">
+            <h3>Join as a Supplier</h3>
+            <p>Ready to expand your business? Join ShelfPilot's wholesale marketplace and get your products in front of convenience stores and other wholesale consumers.</p>
+
+            <!-- Supplier Form -->
+            <form id="supplier-form" action="/submit-supplier" method="POST">
+                <div class="name-fields">
+                    <input type="text" name="first_name" placeholder="First Name" required>
+                    <input type="text" name="last_name" placeholder="Last Name" required>
+                </div>
+                <div class="contact-fields">
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <input type="text" name="company_name" placeholder="Company Name" required>
+                <input type="url" name="company_website" placeholder="Company Website (Optional)">
+                <textarea name="message" placeholder="Message (Optional)"></textarea>
+                <button type="submit">Join as a Supplier</button>
+            </form>
+
+            <div id="success-message" style="display: none; text-align: center;">
+                <p style="color: green; font-size: 1.2rem; margin-top: 10px;">Thank you! We will get back to you shortly!</p>
+                <img src="images/green_check.png" alt="Success" style="width: 50px; display: block; margin: 0 auto;">
+            </div>    
+        </div>
+    </section>
+
+    <!-- Features Section (Always Visible) -->
+    <section class="features">
+        <h2>Why Sell on ShelfPilot?</h2>
+        <div class="feature-boxes">
+            <div class="feature-box">
+                <h3>Expand Your Reach</h3>
+                <p>Get access to a wide network of retailers and wholesalers, making it easier to grow your business.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Increase Sales</h3>
+                <p>With ShelfPilot, you can showcase your products to thousands of customers and increase your revenue.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Dedicated Support</h3>
+                <p>We offer personalized support to help you get started and succeed in the marketplace.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="scripts/sellers.js"></script> <!-- Custom JS for this page -->
+    <script src="scripts/template.js"></script>
+    <script src="scripts/isloggedin.js"></script>
+</body>
+</html>

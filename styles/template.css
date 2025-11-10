@@ -1,0 +1,107 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Adjusting the font size for the entire body */
+body {
+    font-family: 'Gothic A1', sans-serif;
+    background-color: #F3DCD4; /* Use a light background */
+    color: black;
+}
+
+/* Navigation Bar Styling (Consistent with index.html) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 80px; /* Increase this value to make the logo larger */
+}
+
+.logo-link img {
+    max-height: 80px; /* Also adjust here if needed */
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin-left: 30px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #F2A68D;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove the underline */
+}
+
+.logo-link h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0;
+    text-decoration: none; /* Ensure no underline on the text */
+}
+
+/* Set html and body to use flexbox and take the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure the main content area takes up the remaining space */
+.content-area {
+    flex-grow: 1;
+    padding: 100px 50px; /* Add padding to the content area */
+    margin-top: 80px; /* Adjust for the fixed navbar */
+}
+
+/* Footer stays at the bottom without stretching */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    flex-shrink: 0; /* Ensures the footer doesn't shrink */
+    width: 100%;
+}

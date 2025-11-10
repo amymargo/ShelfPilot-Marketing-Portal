@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Demo - ShelfPilot</title>
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1:300,600|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/request_demo.css"> <!-- Custom CSS for this page -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Main Content Area with Background Image -->
+    <section class="content-area">
+        <div class="demo-box">
+            <h3>Request a Demo</h3>
+            <p>Want to see ShelfPilot in action? Fill out the form below, and we will get in touch to schedule a demo at your store! Experience firsthand how our platform can streamline your wholesale needs.</p>
+            
+            <!-- Request Demo Form -->
+            <form id="demo-form" action="/submit-demo" method="POST">
+                <div class="name-fields pair-fields">
+                    <input type="text" name="first_name" placeholder="First Name" required>
+                    <input type="text" name="last_name" placeholder="Last Name" required>
+                </div>
+                <div class="contact-fields pair-fields">
+                    <input type="text" name="phone" placeholder="Phone Number" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="store-fields pair-fields">
+                    <input type="text" name="store_name" placeholder="Store Name" required>
+                    <input type="text" name="store_address" placeholder="Store Address" required>
+                </div>
+                <textarea name="message" placeholder="Message (Optional)"></textarea>
+                <button type="submit">Request Demo</button>
+            </form>
+
+            <!-- Success Message (Initially Hidden) -->
+            <div id="success-message" style="display: none; text-align: center;">
+                <p style="color: green; font-size: 1.2rem; margin-top: 10px;">Thank you! We will get back to you shortly to schedule your demo!</p>
+                <img src="images/green_check.png" alt="Success" style="width: 50px; display: block; margin: 0 auto;">
+            </div>            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="scripts/request_demo.js"></script> <!-- Custom JS for this page -->
+    <script src="scripts/template.js"></script>
+    <script src="scripts/isloggedin.js"></script>
+</body>
+</html>

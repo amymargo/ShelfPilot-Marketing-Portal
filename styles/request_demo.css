@@ -1,0 +1,109 @@
+/* General styling for the form section */
+.content-area {
+    background: url('../images/request_demo.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 80px; /* Adjust for the fixed navbar */
+}
+
+.demo-box {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.demo-box h3 {
+    font-size: 2rem;
+    color: #F2A68D;
+    margin-bottom: 20px;
+}
+
+.demo-box p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #F3DCD4;
+}
+
+.demo-form {
+    margin-top: 30px;
+}
+
+/* Form input fields */
+.demo-box form input,
+.demo-box form textarea,
+.demo-box form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+/* Button styling */
+.demo-box form button {
+    background-color: #F2A68D;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.demo-box form button:hover {
+    background-color: black;
+}
+
+/* Flexbox layout for side-by-side input fields */
+.pair-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.pair-fields input {
+    width: 48%; /* Each input takes half of the available space in the pair */
+}
+
+#success-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#success-message img {
+    width: 50px;
+}
+
+#success-message p {
+    color: green;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .demo-box {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    /* Stack inputs vertically on smaller screens */
+    .pair-fields {
+        flex-direction: column;
+    }
+
+    .pair-fields input {
+        width: 100%;
+    }
+}

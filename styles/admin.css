@@ -1,0 +1,349 @@
+/* Move the navbar-right when profile-menu is active */
+.navbar-right.shifted {
+    transform: translateX(-250px); /* Shift the right-side nav items left by 250px (same width as the menu) */
+    transition: transform 0.3s ease;
+}
+
+/* Profile Menu */
+.profile-menu {
+    position: fixed;
+    right: -250px;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #F3DCD4;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    padding-top: 18px;
+    z-index: 200;
+}
+
+.profile-menu ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.profile-menu ul li {
+    margin-bottom: 20px;
+}
+
+.profile-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.profile-menu button#close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Active state when the menu is open */
+.profile-menu.active {
+    right: 0;
+}
+
+/* Main Content Styling */
+.content-area {
+    padding: 100px 50px;
+    margin-top: 80px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Updated Waiting List Box Styling */
+.waitlist-box {
+    background-color: rgba(255, 255, 255, 0.85); /* Transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0 auto; /* Center the waiting list box */
+    text-align: left; /* Align text to the left */
+    font-size: 1rem;
+}
+
+/* Flexbox to align the title and filter on the same row */
+.waitlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.waitlist-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.waitlist-header label, 
+.waitlist-header select {
+    margin-left: 10px;
+}
+
+/* Dropdown Styling */
+#marketer-filter {
+    color:gray;
+    width: 150px; /* Adjust this value as needed for a longer filter box */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Prevent overflow */
+    border: 1px solid #ccc;
+}
+
+#marketer-filter:focus {
+    border-color: #F2A68D;
+    box-shadow: 0 0 8px rgba(242, 166, 141, 0.5); /* Keep the focus effect consistent */
+}
+
+/* Set html and body to use flexbox and take the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure the main content area takes up the remaining space */
+.content-area {
+    flex-grow: 1;
+    padding: 100px 50px; /* Add padding to the content area */
+    margin-top: 80px; /* Adjust for the fixed navbar */
+}
+
+/* Ensure the table takes the full width of the page */
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    position: relative;
+}
+
+/* Default widths for columns */
+table th:first-child, table td:first-child {
+    width: 6%; /* First column (#) */
+}
+
+/* Resizable columns - the rest of the columns will adjust automatically */
+table th {
+    position: relative; /* Required for resizer to position */
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #F2A68D; /* Your header color */
+    color: white;
+    word-wrap: break-word;
+}
+
+/* For resizing - making the columns resizable */
+.resizer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;  /* Width of the resizer handle */
+    height: 100%;
+    cursor: col-resize;  /* Change the cursor to resize mode */
+    user-select: none;  /* Prevent text selection while resizing */
+    background-color: transparent;  /* Invisible handle */
+}
+
+/* Optional: Alternate row background */
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #e0e0e0; /* Light border for cells */
+    font-size: 1rem;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Prevent overflow */
+}
+
+th {
+    background-color: #f2a68d;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff;
+    color: black;
+}
+
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+/* Ensure table headers and cells align properly */
+thead {
+    background-color: #f2a68d;
+    color: white;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.create-contract-btn {
+    padding: 10px 15px;
+    background-color: #F2A68D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.create-contract-btn:hover {
+    background-color: #e29077; /* Slightly darker shade for hover effect */
+}
+
+.create-contract-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(242, 166, 141, 0.5);
+}
+
+/* Contracts Box Styling (same as Waitlist) */
+.contracts-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.contracts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contracts-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.ein-column {
+    padding-left: 5px; /* Adjust this value as needed */
+}
+
+.ein-column button {
+    margin-left: 2.5px; /* Adjust margin for the button as needed */
+}
+
+.demo-requests-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.seller-requests-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.create-contract-btn {
+    padding: 10px 15px;
+    background-color: #F2A68D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.create-contract-btn:hover {
+    background-color: #e29077;
+}
+
+/* Target the last column in the table on the admin-waitlist page */
+#waiting-list-table td:last-child {
+    vertical-align: middle;
+    text-align: center;
+}
+
+#waiting-list-table td:last-child .create-contract-btn {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+table th:nth-child(1), td:nth-child(1) {
+    width: 3%;
+}
+
+.message-cell {
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for long content */
+    max-width: 150px; /* Set a max width for the cell */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.message-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%; /* Responsive width */
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.close-btn {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-btn:hover {
+    color: #333;
+}

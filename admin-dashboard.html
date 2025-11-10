@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - ShelfPilot</title>
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1:300,600|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/admin-dashboard.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo-link">
+                <div class="logo">
+                    <img src="images/newlogo.png" alt="ShelfPilot Logo">
+                </div>
+            </a>
+            <nav class="navbar-right"> <!-- Added navbar-right class -->
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="request_demo.html">Request a Demo</a></li>
+                    <li><a href="sellers.html">Sellers</a></li>
+                    <li><a href="#" id="profile-link">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Profile Menu -->
+    <div id="profile-menu" class="profile-menu">
+        <button id="close-menu">&times;</button>
+        <ul>
+            <li><a href="admin-dashboard.html">Dashboard</a></li>
+            <li><a href="admin-waitlist.html">Waitlist</a></li>
+            <!-- <li><a href="#">Marketers</a></li> -->
+            <li><a href="admin-contracts.html">Contracts</a></li>
+            <li><a href="admin-demo-requests.html">Demo Requests</a></li>
+            <li><a href="admin-seller-requests.html">Seller Requests</a></li>
+            <li><a href="#" id="logout-link">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content-area" id="dashboard-content">
+        <!-- Waitlist Table -->
+        <div id="waitlist-table-container"></div>
+        <!-- Contracts Table -->
+        <div id="contracts-table-container"></div>
+        <!-- Demo Requests Table -->
+        <div id="demo-requests-table-container"></div>
+        <!-- Seller Requests Table -->
+        <div id="seller-requests-table-container"></div>
+    </div>    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ShelfPilot Inc. All rights reserved.</p>
+    </footer>
+
+    <!-- Updated script tags with defer attribute to ensure proper loading order -->
+    <script src="scripts/admin.js" defer></script>
+    <script src="scripts/admin-dashboard.js" defer></script>
+</body>
+</html>
