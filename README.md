@@ -25,6 +25,7 @@
 ---
 
 ## Key API Endpoints
+_All routes are implemented and handled in [`server.js`](./server.js) using Express. Each endpoint performs database operations, validation, and session management as described below._  
 
 - `POST /login` — authenticate, set session
 - `POST /logout` — clear session
